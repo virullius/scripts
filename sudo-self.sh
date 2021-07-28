@@ -7,7 +7,7 @@ if [ $(id -u) -gt 0 ]; then
   if [ -x $(command -v sudo) ]; then
     exec sudo "$0"
   fi
-  echo "Get root." >2
+  echo "Get root." >&2
   exit 1
 fi
 
